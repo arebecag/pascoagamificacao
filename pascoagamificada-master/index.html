@@ -79,12 +79,12 @@
 
           <a href="#" class="nav-item" data-section="operacional-crm">
             <i class="fas fa-users-gear"></i>
-            <span>Resultado Gameficação</span>
+            <span>Resultado Gamificação</span>
           </a>
 
           <a href="#" class="nav-item" data-section="produtos-campanha">
             <i class="fas fa-egg"></i>
-            <span>Produtos Gameficação</span>
+            <span>Produtos Gamificação</span>
           </a>
         </nav>
       </div>
@@ -351,8 +351,8 @@
       <!-- ===================== OPERACIONAL CRM ===================== -->
       <section class="page-section" id="operacional-crm">
         <div class="section-page-header">
-          <h2><i class="fas fa-users-gear"></i> Operacional CRM</h2>
-          <p>Visão da gamificação no CRM e avanço do funil do jogo</p>
+          <h2><i class="fas fa-users-gear"></i> Resultado da Gamificação</h2>
+          <p>Visão da gamificação no CRM com etapas e ranking de produtos por loja</p>
         </div>
 
         <div class="kpi-row">
@@ -398,7 +398,7 @@
 
           <div class="chart-card chart-card-narrow">
             <div class="chart-header">
-              <h3><i class="fas fa-circle-half-stroke"></i> Scan success</h3>
+              <h3><i class="fas fa-circle-half-stroke"></i> Sucesso da etapa</h3>
             </div>
             <div class="chart-body chart-center-body" style="height:220px">
               <canvas id="chartCRMFunil"></canvas>
@@ -407,7 +407,7 @@
         </div>
 
         <div class="section-title-bar" style="margin-top:2rem">
-          <h2>📅 Etapas do CRM — scan e compra</h2>
+          <h2>📅 Etapas da Gamificação e Compra</h2>
         </div>
 
         <div class="table-scroll">
@@ -417,10 +417,49 @@
                 <th>Etapa</th>
                 <th>Clientes</th>
                 <th>% etapa anterior</th>
-                <th>% do scan</th>
+                <th>% da base</th>
               </tr>
             </thead>
             <tbody id="crmDayTableBody"></tbody>
+          </table>
+        </div>
+
+
+        <div class="chart-card product-rank-card" style="margin-top:2rem">
+          <div class="chart-header">
+            <h3><i class="fas fa-box-open"></i> Ranking de produto</h3>
+            <p class="chart-sub">Resumo geral dos produtos da gamificação com percentual sobre o total</p>
+          </div>
+          <div class="table-scroll">
+            <table class="rank-table" id="crmProductRankTable">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Qtde total</th>
+                  <th>% do total</th>
+                </tr>
+              </thead>
+              <tbody id="crmProductRankBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="section-title-bar" style="margin-top:2rem">
+          <h2>🏬 Ranking de produto por loja</h2>
+        </div>
+
+        <div class="table-scroll">
+          <table class="rank-table" id="crmStoreAccordionTable">
+            <thead>
+              <tr>
+                <th>Loja</th>
+                <th>Qtde por loja</th>
+                <th>% do total</th>
+                <th>Abertura</th>
+              </tr>
+            </thead>
+            <tbody id="crmStoreAccordionBody"></tbody>
           </table>
         </div>
 
