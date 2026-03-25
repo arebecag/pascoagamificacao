@@ -903,6 +903,7 @@ function renderCRM() {
   buildCRMLine();
   buildCRMFunnel();
   buildCRMDayTable();
+  buildCRMProductRankingTable();
   buildCRMStoreAccordionTable();
   buildCRMInsights();
 }
@@ -1100,6 +1101,41 @@ function parseRankingGamificacaoRaw() {
   return stores;
 }
 
+function buildCRMProductRankingTable() {
+  const tbody = document.getElementById('crmProductRankBody');
+  if (!tbody) return;
+
+  const stores = parseRankingGamificacaoRaw();
+  const map = new Map();
+
+  stores.forEach(store => {
+    store.produtos.forEach(prod => {
+      map.set(prod.produto, (map.get(prod.produto) || 0) + prod.qtd);
+    });
+  });
+
+  const rows = [...map.entries()]
+    .map(([produto, qtd]) => ({ produto, qtd }))
+    .sort((a, b) => b.qtd - a.qtd);
+
+  tbody.innerHTML = rows.map(row => {
+    const pct = TOTAL_GERAL_GAMIFICACAO > 0 ? (row.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
+    return `
+      <tr>
+        <td><strong>${row.produto}</strong></td>
+        <td>${fmt(row.qtd)}</td>
+        <td>${fmtPct(pct, 1)}</td>
+      </tr>
+    `;
+  }).join('') + `
+    <tr class="table-total-row">
+      <td><strong>Total Geral</strong></td>
+      <td><strong>${fmt(TOTAL_GERAL_GAMIFICACAO)}</strong></td>
+      <td><strong>100,0%</strong></td>
+    </tr>
+  `;
+}
+
 function buildCRMStoreAccordionTable() {
   const tbody = document.getElementById('crmStoreAccordionBody');
   if (!tbody) return;
@@ -1108,8 +1144,6 @@ function buildCRMStoreAccordionTable() {
 
   tbody.innerHTML = stores.map(store => {
     const pctTotal = TOTAL_GERAL_GAMIFICACAO > 0 ? (store.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
-    const topProduto = store.produtos[0];
-
     const detailRows = store.produtos.map(prod => {
       const pctLoja = store.qtd > 0 ? (prod.qtd / store.qtd) * 100 : 0;
       return `
@@ -1142,7 +1176,7 @@ function buildCRMStoreAccordionTable() {
         </td>
         <td>${fmt(store.qtd)}</td>
         <td>${fmtPct(pctTotal, 1)}</td>
-        <td>${topProduto ? `${topProduto.produto} (${fmt(topProduto.qtd)} | ${fmtPct((topProduto.qtd / store.qtd) * 100, 1)})` : '-'}</td>
+        <td><span style="color:var(--caramel);font-weight:700">Clique para abrir</span></td>
       </tr>
     `;
   }).join('') + `

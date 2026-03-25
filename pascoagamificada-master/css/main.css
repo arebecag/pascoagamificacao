@@ -1386,3 +1386,20 @@ body {
   text-transform: uppercase;
   font-size: 0.7rem;
 }
+
+.product-rank-card {
+  padding: 0.8rem;
+}
+
+.product-rank-card .rank-table thead th,
+.product-rank-card .rank-table tbody td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.84rem;
+}
+
+.store-products-table th,
+.store-products-table td {
+  padding: 8px 10px;
+  font-size: 0.82rem;
+}
