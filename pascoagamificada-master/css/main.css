@@ -1388,14 +1388,16 @@ body {
 }
 
 .product-rank-card {
-  padding: 0.8rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(195,122,48,0.18);
+  box-shadow: 0 10px 24px rgba(123,63,26,0.10);
 }
 
 .product-rank-card .rank-table thead th,
 .product-rank-card .rank-table tbody td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 0.84rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 0.9rem;
 }
 
 .store-products-table th,

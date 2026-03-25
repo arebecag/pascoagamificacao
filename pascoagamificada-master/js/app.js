@@ -1105,20 +1105,7 @@ function buildCRMProductRankingTable() {
   const tbody = document.getElementById('crmProductRankBody');
   if (!tbody) return;
 
-  const stores = parseRankingGamificacaoRaw();
-  const map = new Map();
-
-  stores.forEach(store => {
-    store.produtos.forEach(prod => {
-      map.set(prod.produto, (map.get(prod.produto) || 0) + prod.qtd);
-    });
-  });
-
-  const rows = [...map.entries()]
-    .map(([produto, qtd]) => ({ produto, qtd }))
-    .sort((a, b) => b.qtd - a.qtd);
-
-  tbody.innerHTML = rows.map(row => {
+  tbody.innerHTML = RANKING_GERAL_PRODUTOS_GAMIFICACAO.map(row => {
     const pct = TOTAL_GERAL_GAMIFICACAO > 0 ? (row.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
     return `
       <tr>
@@ -1176,7 +1163,6 @@ function buildCRMStoreAccordionTable() {
         </td>
         <td>${fmt(store.qtd)}</td>
         <td>${fmtPct(pctTotal, 1)}</td>
-        <td><span style="color:var(--caramel);font-weight:700">Clique para abrir</span></td>
       </tr>
     `;
   }).join('') + `
@@ -1184,7 +1170,6 @@ function buildCRMStoreAccordionTable() {
       <td><strong>Total Geral</strong></td>
       <td><strong>${fmt(TOTAL_GERAL_GAMIFICACAO)}</strong></td>
       <td><strong>100,0%</strong></td>
-      <td><strong>Todos os produtos e lojas visíveis</strong></td>
     </tr>
   `;
 }
