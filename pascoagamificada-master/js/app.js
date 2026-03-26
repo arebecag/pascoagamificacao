@@ -1128,9 +1128,10 @@ function buildCRMStoreAccordionTable() {
   if (!tbody) return;
 
   const stores = parseRankingGamificacaoRaw();
+  const totalLojas = stores.reduce((sum, store) => sum + store.qtd, 0);
 
   tbody.innerHTML = stores.map(store => {
-    const pctTotal = TOTAL_GERAL_GAMIFICACAO > 0 ? (store.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
+    const pctTotal = totalLojas > 0 ? (store.qtd / totalLojas) * 100 : 0;
     const detailRows = store.produtos.map(prod => {
       const pctLoja = store.qtd > 0 ? (prod.qtd / store.qtd) * 100 : 0;
       return `
@@ -1168,7 +1169,7 @@ function buildCRMStoreAccordionTable() {
   }).join('') + `
     <tr class="table-total-row">
       <td><strong>Total Geral</strong></td>
-      <td><strong>${fmt(TOTAL_GERAL_GAMIFICACAO)}</strong></td>
+      <td><strong>${fmt(totalLojas)}</strong></td>
       <td><strong>100,0%</strong></td>
     </tr>
   `;
