@@ -516,177 +516,201 @@ const RANKING_GERAL_PRODUTOS_GAMIFICACAO = [
 
 const TOTAL_GERAL_GAMIFICACAO = 383;
 
-const RANKING_PRODUTOS_GAMIFICACAO_RAW = `65 - Rio Negro\t61
-Amandita Lacta Choc.200g\t61
-52 - Mafra - Centro\t47
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t10
-Choc.Lacta Shot 145g\t9
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t8
-Choc.Lacta Amaro 145g\t4
-Choc.Lacta Ouro Bco 98g\t3
-Choc.Lacta Laka Rech.Caramelo 104g\t3
-Choc.Lacta Laka 145g\t3
-Choc.Lacta Laka 80g\t2
-Amandita Lacta Choc.200g\t2
-Choc.Lacta Ao Leite 145g\t2
-Choc.Lacta Laka/Oreo 145g\t1
-46 - Campo Largo - Sao Jose\t32
-Choc.Lacta Ao Leite 145g\t12
-Choc.Lacta Laka 80g\t7
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t5
-Choc.Lacta Laka 145g\t5
-Choc.Lacta Laka/Oreo 145g\t2
-Choc.Lacta Laka Rech.Caramelo 104g\t1
-6 - Pinheirinho\t24
-Choc.Lacta Shot 80g\t6
-Choc.Lacta Laka Rech.Caramelo 104g\t4
-Choc.Lacta Ouro Bco 98g\t4
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t3
-Choc.Lacta Shot 145g\t2
-Choc.Lacta Ao Leite 145g\t1
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t1
-Choc.Lacta Laka 80g\t1
-Choc.Lacta Ao Leite 80g\t1
-Choc.Lacta Laka 145g\t1
-32 - Ponta Grossa - Uvaranas\t21
-Choc.Lacta Laka Rech.Caramelo 104g\t10
-Choc.Lacta Ouro Bco 98g\t3
-Amandita Lacta Choc.200g\t3
-Choc.Lacta Diamante Negro/Laka 80g\t2
-Choc.Lacta Laka 80g\t1
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t1
-Choc.Lacta Diamante Negro/Laka 145g\t1
-21 - Nilo Pecanha\t14
-Amandita Lacta Choc.200g\t4
-Choc.Lacta Ouro Bco 98g\t2
-Choc.Lacta Shot 80g\t2
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t2
-Choc.Lacta Ao Leite 80g\t2
-Choc.Lacta Laka Rech.Caramelo 104g\t1
-Choc.Lacta Amaro 145g\t1
-25 - Paranagua - Raia\t13
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t4
-Choc.Lacta Laka/Oreo 145g\t1
-Choc.Lacta Laka 145g\t1
-Choc.Lacta Diamante Negro/Laka 80g\t1
-Choc.Lacta Ao Leite 80g\t1
-Choc.Lacta Laka 80g\t1
-Choc.Lacta Diamante Negro 145g\t1
-Choc.Lacta Ao Leite 145g\t1
-Choc.Lacta Ouro Bco 98g\t1
-Choc.Lacta Diamante Negro/Laka 145g\t1
-8 - Paranagua - Centro\t13
-Choc.Lacta Shot 145g\t6
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t4
-Choc.Lacta Laka 80g\t1
-Choc.Lacta Ao Leite 145g\t1
-Choc.Lacta Diamante Negro 145g\t1
-48 - Joinville - Itaum\t12
-Choc.Lacta Ouro Bco 98g\t3
-Amandita Lacta Choc.200g\t3
-Choc.Lacta Diamante Negro/Laka 145g\t1
-Choc.Lacta Amaro 145g\t1
-Choc.Lacta Laka/Oreo 145g\t1
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t1
-Choc.Lacta Diamante Negro 145g\t1
-Choc.Lacta Ao Leite 145g\t1
-56 - Piraquara\t11
-Choc.Lacta Shot 145g\t2
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t2
-Choc.Lacta Laka Rech.Caramelo 104g\t1
-Choc.Lacta Ao Leite 145g\t1
-Choc.Lacta Laka/Oreo 145g\t1
-Choc.Lacta Ao Leite 80g\t1
-Choc.Lacta Shot 80g\t1
-Choc.Lacta Diamante Negro/Laka 80g\t1
-Choc.Lacta Laka 80g\t1
-42 - Ponta Grossa - Jardim Carvalho\t10
-Choc.Lacta Laka 80g\t5
-Choc.Lacta Laka/Oreo 145g\t3
-Amandita Lacta Choc.200g\t1
-Choc.Lacta Ao Leite 145g\t1
-33 - Sao Jose - Rua Joinville\t8
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t3
-Choc.Lacta Ao Leite 145g\t2
-Choc.Lacta Ouro Bco 98g\t1
-Choc.Lacta Shot 145g\t1
-Choc.Lacta Laka 145g\t1
-63 - Maringa - Av Kakogawa\t7
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t4
-Choc.Lacta Ao Leite 80g\t2
-Choc.Lacta Ao Leite 145g\t1
-30 - Fazenda Rio Grande\t6
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t2
-Choc.Lacta Diamante Negro/Laka 145g\t1
-Choc.Lacta Laka/Oreo 145g\t1
-Choc.Lacta Ao Leite 145g\t1
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t1
-20 - Maringa - Av Parana\t6
-Choc.Lacta Ao Leite 145g\t4
-Choc.Lacta Shot 145g\t1
-Choc.Lacta Laka Rech.Caramelo 104g\t1
-82 - Condor Cic Jk\t6
-Choc.Lacta Diamante Negro 145g\t6
-43 - Almirante Tamandare\t6
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t4
-Choc.Lacta Laka Rech.Caramelo 104g\t2
-27 - Novo Mundo\t6
-Choc.Lacta Laka 145g\t3
-Choc.Lacta Shot 80g\t1
-Choc.Lacta Amaro 145g\t1
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t1
-29 - Agua Verde\t4
-Choc.Lacta Ao Leite 80g\t2
-Choc.Lacta Laka 80g\t1
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t1
-24 - Santa Candida\t4
-Choc.Lacta Laka 80g\t2
-Amandita Lacta Choc.200g\t1
-Choc.Lacta Ao Leite 80g\t1
-4 - Lapa\t4
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t3
-Choc.Lacta Shot 145g\t1
-67-Ponta Grossa - Ernesto Viléla\t3
-Choc.Lacta Laka 80g\t1
-Choc.Lacta Shot 80g\t1
-Choc.Lacta Ouro Bco 98g\t1
-83 - Condor Merces\t3
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t2
-Choc.Lacta Diamante Negro/Laka 145g\t1
-23 - Araucaria BR\t3
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t1
-Choc.Lacta Laka 145g\t1
-Choc.Lacta Diamante Negro 145g\t1
-37 - Cajuru\t2
-Choc.Lacta Ouro Bco 98g\t1
-Choc.Lacta Diamante Negro/Laka 145g\t1
-14 - Sao Jose Dos Pinhais\t2
-Choc.Lacta Laka 80g\t2
-28 - Cristo Rei\t2
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t2
-7 - Marechal\t2
-Choc.Lacta Shot 145g\t1
-Choc.Lacta Ao Leite 145g\t1
-17 - Ahu\t1
-Amandita Lacta Choc.200g\t1
-22 - Champagnat\t1
-Choc.Lacta Laka 80g\t1
-66 - Barreirinha\t1
-Choc.Lacta Ao Leite Rech.Caramelo 104g\t1
-71 - Araucaria Capela Velha\t1
-Choc.Lacta Shot 80g\t1
-54 - Francisco Derosso\t1
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t1
-60 - Maringa - Av Dr Luiz Teixeira\t1
-Bombom Lacta Ouro Bco/Sonho Valsa 220g\t1
-13 - Sitio Cercado\t1
-Choc.Lacta Laka Rech.Caramelo 104g\t1
-45 - Araucaria Costeira\t1
-Choc.Lacta Ouro Bco 98g\t1
-10 - Campo Comprido\t1
-Choc.Lacta Ao Leite 145g\t1
-64 - Gralha Azul\t1
-Choc.Lacta Shot 80g\t1
-11 - Sao Braz\t1
-Choc.Lacta Ao Leite 145g\t1
-Total Geral\t343`;
+const RANKING_PRODUTOS_GAMIFICACAO_RAW = `65 - Rio Negro	61
+Amandita Lacta Choc.200g	61
+52 - Mafra - Centro	51
+Amandita Lacta Choc.200g	3
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	8
+Choc.Lacta Amaro 145g	5
+Choc.Lacta Ao Leite 145g	2
+Choc.Lacta Ao Leite Rech.Caramelo 104g	10
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Laka 145g	3
+Choc.Lacta Laka 80g	2
+Choc.Lacta Laka Rech.Caramelo 104g	3
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ouro Bco 98g	3
+Choc.Lacta Shot 145g	10
+46 - Campo Largo - Sao Jose	34
+Amandita Lacta Choc.200g	2
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	5
+Choc.Lacta Ao Leite 145g	12
+Choc.Lacta Laka 145g	5
+Choc.Lacta Laka 80g	7
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Laka/Oreo 145g	2
+32 - Ponta Grossa - Uvaranas	27
+Amandita Lacta Choc.200g	3
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Diamante Negro/Laka 80g	4
+Choc.Lacta Laka 80g	4
+Choc.Lacta Laka Rech.Caramelo 104g	10
+Choc.Lacta Ouro Bco 98g	3
+Choc.Lacta Shot 80g	1
+6 - Pinheirinho	27
+Amandita Lacta Choc.200g	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	3
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Laka Rech.Caramelo 104g	4
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ouro Bco 98g	4
+Choc.Lacta Shot 145g	2
+Choc.Lacta Shot 80g	6
+21 - Nilo Pecanha	14
+Amandita Lacta Choc.200g	4
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Ouro Bco 98g	2
+Choc.Lacta Shot 80g	2
+25 - Paranagua - Raia	13
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	4
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Diamante Negro/Laka 80g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ouro Bco 98g	1
+8 - Paranagua - Centro	13
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	4
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Shot 145g	6
+48 - Joinville - Itaum	12
+Amandita Lacta Choc.200g	3
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ouro Bco 98g	3
+56 - Piraquara	11
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Diamante Negro/Laka 80g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Shot 145g	2
+Choc.Lacta Shot 80g	1
+42 - Ponta Grossa - Jardim Carvalho	10
+Amandita Lacta Choc.200g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Laka 80g	5
+Choc.Lacta Laka/Oreo 145g	3
+83 - Condor Merces	9
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 145g	3
+Choc.Lacta Shot 80g	1
+43 - Almirante Tamandare	9
+Choc.Lacta Ao Leite Rech.Caramelo 104g	4
+Choc.Lacta Laka Rech.Caramelo 104g	2
+Choc.Lacta Shot 145g	3
+33 - Sao Jose - Rua Joinville	8
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	3
+Choc.Lacta Ao Leite 145g	2
+Choc.Lacta Laka 145g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 145g	1
+82 - Condor Cic Jk	8
+Amandita Lacta Choc.200g	1
+Choc.Lacta Diamante Negro 145g	6
+Choc.Lacta Laka 80g	1
+63 - Maringa - Av Kakogawa	7
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Ao Leite Rech.Caramelo 104g	4
+30 - Fazenda Rio Grande	6
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka/Oreo 145g	1
+20 - Maringa - Av Parana	6
+Choc.Lacta Ao Leite 145g	4
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Shot 145g	1
+27 - Novo Mundo	6
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Laka 145g	3
+Choc.Lacta Shot 80g	1
+19 - Ponta Grossa - Nova Russia	5
+Choc.Lacta Ouro Bco 98g	5
+29 - Agua Verde	4
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Laka 80g	1
+7 - Marechal	4
+Choc.Lacta Amaro 80g	1
+Choc.Lacta Ao Leite 145g	2
+Choc.Lacta Shot 145g	1
+24 - Santa Candida	4
+Amandita Lacta Choc.200g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Laka 80g	2
+64 - Gralha Azul	4
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Diamante Negro 80g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 80g	1
+4 - Lapa	4
+Choc.Lacta Ao Leite Rech.Caramelo 104g	3
+Choc.Lacta Shot 145g	1
+23 - Araucaria BR	3
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Laka 145g	1
+67-Ponta Grossa - Ernesto Viléla	3
+Choc.Lacta Laka 80g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 80g	1
+41 - Campo Mourao	3
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Diamante Negro 80g	1
+Choc.Lacta Ouro Bco 98g	1
+37 - Cajuru	2
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Ouro Bco 98g	1
+28 - Cristo Rei	2
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+14 - Sao Jose Dos Pinhais	2
+Choc.Lacta Laka 80g	2
+22 - Champagnat	2
+Choc.Lacta Laka 80g	2
+13 - Sitio Cercado	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+71 - Araucaria Capela Velha	1
+Choc.Lacta Shot 80g	1
+17 - Ahu	1
+Amandita Lacta Choc.200g	1
+54 - Francisco Derosso	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+11 - Sao Braz	1
+Choc.Lacta Ao Leite 145g	1
+10 - Campo Comprido	1
+Choc.Lacta Ao Leite 145g	1
+60 - Maringa - Av Dr Luiz Teixeira	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+45 - Araucaria Costeira	1
+Choc.Lacta Ouro Bco 98g	1
+66 - Barreirinha	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Total Geral	383`;
+
