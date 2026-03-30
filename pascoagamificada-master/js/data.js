@@ -460,28 +460,29 @@ const RANKING_GERAL_PRODUTOS_GAMIFICACAO = [
 const TOTAL_GERAL_GAMIFICACAO = 448;
 
 const RANKING_PRODUTOS_GAMIFICACAO_RAW = `65 - Rio Negro	61
-Amandita Lacta Choc.200g	61
-52 - Mafra - Centro	51
+Amandita Lacta Choc.200g	57
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	2
+Choc.Lacta Laka 80g	1
+52 - Mafra - Centro	47
 Amandita Lacta Choc.200g	3
 Bombom Lacta Ouro Bco/Sonho Valsa 220g	8
 Choc.Lacta Amaro 145g	5
 Choc.Lacta Ao Leite 145g	2
-Choc.Lacta Ao Leite Rech.Caramelo 104g	10
+Choc.Lacta Ao Leite Rech.Caramelo 104g	9
 Choc.Lacta Diamante Negro 145g	1
 Choc.Lacta Laka 145g	3
 Choc.Lacta Laka 80g	2
-Choc.Lacta Laka Rech.Caramelo 104g	3
-Choc.Lacta Laka/Oreo 145g	1
-Choc.Lacta Ouro Bco 98g	3
-Choc.Lacta Shot 145g	10
-46 - Campo Largo - Sao Jose	34
-Amandita Lacta Choc.200g	2
-Bombom Lacta Ouro Bco/Sonho Valsa 220g	5
-Choc.Lacta Ao Leite 145g	12
-Choc.Lacta Laka 145g	5
-Choc.Lacta Laka 80g	7
 Choc.Lacta Laka Rech.Caramelo 104g	1
-Choc.Lacta Laka/Oreo 145g	2
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ouro Bco 98g	2
+Choc.Lacta Shot 145g	10
+46 - Campo Largo - Sao Jose	15
+Amandita Lacta Choc.200g	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	5
+Choc.Lacta Ao Leite 145g	5
+Choc.Lacta Laka 145g	3
+Choc.Lacta Laka/Oreo 145g	1
 6 - Pinheirinho	27
 Choc.Lacta Shot 80g	6
 Choc.Lacta Laka Rech.Caramelo 104g	4

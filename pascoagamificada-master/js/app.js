@@ -1128,7 +1128,7 @@ function buildCRMStoreAccordionTable() {
   if (!tbody) return;
 
   const stores = parseRankingGamificacaoRaw();
-  const totalLojas = stores.reduce((sum, store) => sum + store.qtd, 0);
+  const totalLojas = TOTAL_GERAL_GAMIFICACAO;
 
   tbody.innerHTML = stores.map(store => {
     const pctTotal = totalLojas > 0 ? (store.qtd / totalLojas) * 100 : 0;
