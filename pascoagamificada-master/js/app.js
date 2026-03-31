@@ -903,6 +903,8 @@ function renderCRM() {
   buildCRMLine();
   buildCRMFunnel();
   buildCRMDayTable();
+  buildCRMProductRankingTable();
+  buildCRMStoreAccordionTable();
   buildCRMInsights();
 }
 
@@ -1064,6 +1066,113 @@ function buildCRMInsights() {
       </div>
     </div>
   `).join('');
+}
+
+
+
+function parseRankingGamificacaoRaw() {
+  const lines = RANKING_PRODUTOS_GAMIFICACAO_RAW
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const stores = [];
+  let currentStore = null;
+
+  lines.forEach(line => {
+    const [name, qtyText] = line.split('\t');
+    const qty = Number(qtyText);
+    if (!name || Number.isNaN(qty)) return;
+    if (name.toLowerCase().startsWith('total geral')) return;
+
+    const isStore = /^\d+\s*-/.test(name) || /^\d+-/.test(name);
+
+    if (isStore) {
+      currentStore = { loja: name, qtd: qty, produtos: [] };
+      stores.push(currentStore);
+      return;
+    }
+
+    if (currentStore) {
+      currentStore.produtos.push({ produto: name, qtd: qty });
+    }
+  });
+
+  return stores;
+}
+
+function buildCRMProductRankingTable() {
+  const tbody = document.getElementById('crmProductRankBody');
+  if (!tbody) return;
+
+  tbody.innerHTML = RANKING_GERAL_PRODUTOS_GAMIFICACAO.map(row => {
+    const pct = TOTAL_GERAL_GAMIFICACAO > 0 ? (row.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
+    return `
+      <tr>
+        <td><strong>${row.produto}</strong></td>
+        <td>${fmt(row.qtd)}</td>
+        <td>${fmtPct(pct, 1)}</td>
+      </tr>
+    `;
+  }).join('') + `
+    <tr class="table-total-row">
+      <td><strong>Total Geral</strong></td>
+      <td><strong>${fmt(TOTAL_GERAL_GAMIFICACAO)}</strong></td>
+      <td><strong>100,0%</strong></td>
+    </tr>
+  `;
+}
+
+function buildCRMStoreAccordionTable() {
+  const tbody = document.getElementById('crmStoreAccordionBody');
+  if (!tbody) return;
+
+  const stores = parseRankingGamificacaoRaw();
+  const totalLojas = TOTAL_GERAL_GAMIFICACAO;
+
+  tbody.innerHTML = stores.map(store => {
+    const pctTotal = totalLojas > 0 ? (store.qtd / totalLojas) * 100 : 0;
+    const detailRows = store.produtos.map(prod => {
+      const pctLoja = store.qtd > 0 ? (prod.qtd / store.qtd) * 100 : 0;
+      return `
+        <tr>
+          <td>${prod.produto}</td>
+          <td>${fmt(prod.qtd)}</td>
+          <td>${fmtPct(pctLoja, 1)}</td>
+        </tr>
+      `;
+    }).join('');
+
+    return `
+      <tr>
+        <td>
+          <details class="store-accordion">
+            <summary><strong>${store.loja}</strong></summary>
+            <div class="store-accordion-content">
+              <table class="store-products-table">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Qtde</th>
+                    <th>% na loja</th>
+                  </tr>
+                </thead>
+                <tbody>${detailRows}</tbody>
+              </table>
+            </div>
+          </details>
+        </td>
+        <td>${fmt(store.qtd)}</td>
+        <td>${fmtPct(pctTotal, 1)}</td>
+      </tr>
+    `;
+  }).join('') + `
+    <tr class="table-total-row">
+      <td><strong>Total Geral</strong></td>
+      <td><strong>${fmt(totalLojas)}</strong></td>
+      <td><strong>100,0%</strong></td>
+    </tr>
+  `;
 }
 
 // ═══════════════════════════════════════════════════════════════
