@@ -1340,3 +1340,68 @@ body {
   justify-content: center;
   box-shadow: 0 10px 24px rgba(123,63,26,0.18);
 }
+
+.store-accordion summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.store-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.store-accordion summary::before {
+  content: '▸';
+  margin-right: 8px;
+  color: var(--caramel);
+  font-weight: 700;
+}
+
+.store-accordion[open] summary::before {
+  content: '▾';
+}
+
+.store-accordion-content {
+  margin-top: 10px;
+  border: 1px solid #efe5d4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.store-products-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.store-products-table th,
+.store-products-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f2eadb;
+}
+
+.store-products-table th {
+  background: #fcf7ef;
+  color: var(--choco-mid);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.product-rank-card {
+  padding: 1.2rem;
+  border: 1px solid rgba(195,122,48,0.18);
+  box-shadow: 0 10px 24px rgba(123,63,26,0.10);
+}
+
+.product-rank-card .rank-table thead th,
+.product-rank-card .rank-table tbody td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.store-products-table th,
+.store-products-table td {
+  padding: 8px 10px;
+  font-size: 0.82rem;
+}
