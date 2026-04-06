@@ -1032,7 +1032,7 @@ function buildCRMDayTable() {
 
   const rows = [
     {
-      etapa: 'Abriu scan',
+      etapa: 'Abriu etapa',
       clientes: TOTAIS.gamificacaoAbriuScan,
       pctEtapa: 100,
       pctBase: 100
