@@ -56,7 +56,7 @@
 
         <div class="sidebar-meta">
           <span class="meta-dot"></span>
-          <span>Atualização: 24/03/2026</span>
+          <span>Atualização: 05/04/2026</span>
         </div>
 
         <nav class="sidebar-nav">
@@ -79,12 +79,12 @@
 
           <a href="#" class="nav-item" data-section="operacional-crm">
             <i class="fas fa-users-gear"></i>
-            <span>Resultado Gameficação</span>
+            <span>Resultado Gamificação</span>
           </a>
 
           <a href="#" class="nav-item" data-section="produtos-campanha">
             <i class="fas fa-egg"></i>
-            <span>Produtos Gameficação</span>
+            <span>Produtos Gamificação</span>
           </a>
         </nav>
       </div>
@@ -108,7 +108,7 @@
             <div class="kpi-icon"><i class="fas fa-users"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">Clientes compraram produtos da campanha</span>
-              <span class="kpi-value" data-count="88656">0</span>
+              <span id="kpiClientesCampanha" class="kpi-value" data-count="313803">0</span>
               <span class="kpi-sub">total de clientes da campanha</span>
             </div>
           </div>
@@ -117,7 +117,7 @@
             <div class="kpi-icon"><i class="fas fa-mobile-screen-button"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">Clientes com app</span>
-              <span class="kpi-value" data-count="41584">0</span>
+              <span id="kpiClientesApp" class="kpi-value" data-count="74695">0</span>
               <span class="kpi-sub">base com app identificado</span>
             </div>
           </div>
@@ -126,7 +126,7 @@
             <div class="kpi-icon"><i class="fas fa-receipt"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">CUPONS VENDAS</span>
-              <span class="kpi-value" data-count="94907">0</span>
+              <span id="kpiCuponsVendas" class="kpi-value" data-count="333260">0</span>
               <span class="kpi-sub">volume total de vendas da campanha</span>
             </div>
           </div>
@@ -135,7 +135,7 @@
             <div class="kpi-icon"><i class="fas fa-store"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">Total de lojas ativas na campanha</span>
-              <span class="kpi-value" data-count="68">0</span>
+              <span id="kpiLojasAtivas" class="kpi-value" data-count="68">0</span>
               <span class="kpi-sub">lojas ativas no período</span>
             </div>
           </div>
@@ -145,7 +145,7 @@
           <div class="chart-card chart-card-wide">
            <div class="chart-header">
   <h3><i class="fas fa-chart-line"></i> Evolução Diária — Campanha</h3>
-  <p class="chart-sub">Comparativo diário de 01/03 a 24/03 — compraram vs compraram pelo app</p>
+  <p class="chart-sub">Comparativo diário de 01/03 a 05/04 — compraram vs compraram pelo app</p>
 </div>
 
             <div class="chart-body" style="height:260px">
@@ -163,8 +163,8 @@
             </div>
             <div class="donut-legend">
               <span class="dot dot-purple"></span><span>Abriu o jogo <strong>16.752</strong></span>
-              <span class="dot dot-orange"></span><span>Abriu scan <strong>859</strong></span>
-              <span class="dot dot-cream"></span><span>Escaneou <strong>820</strong></span>
+              <span class="dot dot-orange"></span><span>Abriu scan <strong id="legendAbriuScan">3.708</strong></span>
+              <span class="dot dot-cream"></span><span>Escaneou <strong id="legendEscaneou">3.204</strong></span>
             </div>
           </div>
         </div>
@@ -351,8 +351,8 @@
       <!-- ===================== OPERACIONAL CRM ===================== -->
       <section class="page-section" id="operacional-crm">
         <div class="section-page-header">
-          <h2><i class="fas fa-users-gear"></i> Operacional CRM</h2>
-          <p>Visão da gamificação no CRM e avanço do funil do jogo</p>
+          <h2><i class="fas fa-users-gear"></i> Resultado da Gamificação</h2>
+          <p>Visão da gamificação no CRM com etapas e ranking de produtos por loja</p>
         </div>
 
         <div class="kpi-row">
@@ -360,8 +360,8 @@
             <div class="kpi-icon"><i class="fas fa-mobile-screen-button"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">Abriu scan</span>
-              <span class="kpi-value" data-count="859">0</span>
-              <span class="kpi-sub">5,13% de quem abriu o jogo</span>
+              <span id="kpiAbriuScan" class="kpi-value" data-count="3708">0</span>
+              <span id="kpiAbriuScanSub" class="kpi-sub">22,13% de quem abriu o jogo</span>
             </div>
           </div>
 
@@ -369,8 +369,8 @@
             <div class="kpi-icon"><i class="fas fa-qrcode"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">Escaneou</span>
-              <span class="kpi-value" data-count="820">0</span>
-              <span class="kpi-sub">95,46% de scan success</span>
+              <span id="kpiEscaneou" class="kpi-value" data-count="3204">0</span>
+              <span id="kpiEscaneouSub" class="kpi-sub">86,41% de scan success</span>
             </div>
           </div>
 
@@ -378,8 +378,8 @@
             <div class="kpi-icon"><i class="fas fa-cart-shopping"></i></div>
             <div class="kpi-info">
               <span class="kpi-label">CPFs que compraram</span>
-              <span class="kpi-value" data-count="81">0</span>
-              <span class="kpi-sub">9,88% de quem escaneou</span>
+              <span id="kpiCpfsCompraram" class="kpi-value" data-count="380">0</span>
+              <span id="kpiCpfsCompraramSub" class="kpi-sub">11,86% de quem escaneou</span>
             </div>
           </div>
 
@@ -398,7 +398,7 @@
 
           <div class="chart-card chart-card-narrow">
             <div class="chart-header">
-              <h3><i class="fas fa-circle-half-stroke"></i> Scan success</h3>
+              <h3><i class="fas fa-circle-half-stroke"></i> Sucesso da etapa</h3>
             </div>
             <div class="chart-body chart-center-body" style="height:220px">
               <canvas id="chartCRMFunil"></canvas>
@@ -407,7 +407,7 @@
         </div>
 
         <div class="section-title-bar" style="margin-top:2rem">
-          <h2>📅 Etapas do CRM — scan e compra</h2>
+          <h2>📅 Etapas da Gamificação e Compra</h2>
         </div>
 
         <div class="table-scroll">
@@ -417,10 +417,48 @@
                 <th>Etapa</th>
                 <th>Clientes</th>
                 <th>% etapa anterior</th>
-                <th>% do scan</th>
+                <th>% da base</th>
               </tr>
             </thead>
             <tbody id="crmDayTableBody"></tbody>
+          </table>
+        </div>
+
+
+        <div class="chart-card product-rank-card" style="margin-top:2rem">
+          <div class="chart-header">
+            <h3><i class="fas fa-box-open"></i> Ranking de produto</h3>
+            <p class="chart-sub">Resumo geral dos produtos da gamificação com percentual sobre o total</p>
+          </div>
+          <div class="table-scroll">
+            <table class="rank-table" id="crmProductRankTable">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Qtde total</th>
+                  <th>% do total</th>
+                </tr>
+              </thead>
+              <tbody id="crmProductRankBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="section-title-bar" style="margin-top:2rem">
+          <h2>🏬 Ranking de produto por loja</h2>
+        </div>
+
+        <div class="table-scroll">
+          <table class="rank-table" id="crmStoreAccordionTable">
+            <thead>
+              <tr>
+                <th>Loja</th>
+                <th>Qtde por loja</th>
+                <th>% do total</th>
+              </tr>
+            </thead>
+            <tbody id="crmStoreAccordionBody"></tbody>
           </table>
         </div>
 
@@ -434,19 +472,19 @@
       <span>🐰 Caça aos Coelhos Condor</span>
       <span>★ Escaneie e ganhe desconto!</span>
       <span>★ 19 produtos participantes</span>
-      <span>★ Dados atualizados até 24/03/2026</span>
+      <span>★ Dados atualizados até 05/04/2026</span>
       <span>★ A Maior Páscoa do Brasil!</span>
       <span>★ Condor Premia</span>
       <span>🐰 Caça aos Coelhos Condor</span>
       <span>★ Escaneie e ganhe desconto!</span>
       <span>★ 19 produtos participantes</span>
-      <span>★ Dados atualizados até 24/03/2026</span>
+      <span>★ Dados atualizados até 05/04/2026</span>
       <span>★ A Maior Páscoa do Brasil!</span>
       <span>★ Condor Premia</span>
     </div>
   </div>
 
-  <script src="js/data.js?v=20260325-data-fix"></script>
-  <script src="js/app.js?v=20260325-data-fix"></script>
+  <script src="js/data.js?v=20260406-crm-refresh-4"></script>
+  <script src="js/app.js?v=20260406-crm-refresh-4"></script>
 </body>
 </html>

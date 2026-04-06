@@ -74,6 +74,39 @@ function animateCounters() {
   });
 }
 
+function syncDashboardKpisFromData() {
+  const setCount = (id, value) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.dataset.count = String(value);
+    el.textContent = '0';
+  };
+
+  setCount('kpiClientesCampanha', TOTAIS.clientesCompraramCampanha);
+  setCount('kpiClientesApp', TOTAIS.clientesComAppInstalado);
+  setCount('kpiCuponsVendas', TOTAIS.cuponsVendasCampanha);
+  setCount('kpiLojasAtivas', TOTAIS.lojasParticipantes);
+  setCount('kpiAbriuScan', TOTAIS.gamificacaoAbriuScan);
+  setCount('kpiEscaneou', TOTAIS.gamificacaoEscaneou);
+  setCount('kpiCpfsCompraram', TOTAIS.gamificacaoCompletou);
+
+  const legendAbriuScan = document.getElementById('legendAbriuScan');
+  if (legendAbriuScan) legendAbriuScan.textContent = fmt(TOTAIS.gamificacaoAbriuScan);
+  const legendEscaneou = document.getElementById('legendEscaneou');
+  if (legendEscaneou) legendEscaneou.textContent = fmt(TOTAIS.gamificacaoEscaneou);
+
+  const pctAbriuScan = (TOTAIS.gamificacaoAbriuScan / TOTAIS.gamificacaoAbriuJogo) * 100;
+  const pctEscaneou = (TOTAIS.gamificacaoEscaneou / TOTAIS.gamificacaoAbriuScan) * 100;
+  const pctCompraram = (TOTAIS.gamificacaoCompletou / TOTAIS.gamificacaoEscaneou) * 100;
+
+  const kpiAbriuScanSub = document.getElementById('kpiAbriuScanSub');
+  if (kpiAbriuScanSub) kpiAbriuScanSub.textContent = `${fmtPct(pctAbriuScan, 2)} de quem abriu o jogo`;
+  const kpiEscaneouSub = document.getElementById('kpiEscaneouSub');
+  if (kpiEscaneouSub) kpiEscaneouSub.textContent = `${fmtPct(pctEscaneou, 2)} de scan success`;
+  const kpiCpfsCompraramSub = document.getElementById('kpiCpfsCompraramSub');
+  if (kpiCpfsCompraramSub) kpiCpfsCompraramSub.textContent = `${fmtPct(pctCompraram, 2)} de quem escaneou`;
+}
+
 
 function initMobileMenu() {
   const sidebar = document.getElementById('sidebar');
@@ -903,6 +936,8 @@ function renderCRM() {
   buildCRMLine();
   buildCRMFunnel();
   buildCRMDayTable();
+  buildCRMProductRankingTable();
+  buildCRMStoreAccordionTable();
   buildCRMInsights();
 }
 
@@ -1066,12 +1101,120 @@ function buildCRMInsights() {
   `).join('');
 }
 
+
+
+function parseRankingGamificacaoRaw() {
+  const lines = RANKING_PRODUTOS_GAMIFICACAO_RAW
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const stores = [];
+  let currentStore = null;
+
+  lines.forEach(line => {
+    const [name, qtyText] = line.split('\t');
+    const qty = Number(qtyText);
+    if (!name || Number.isNaN(qty)) return;
+    if (name.toLowerCase().startsWith('total geral')) return;
+
+    const isStore = /^\d+\s*-/.test(name) || /^\d+-/.test(name);
+
+    if (isStore) {
+      currentStore = { loja: name, qtd: qty, produtos: [] };
+      stores.push(currentStore);
+      return;
+    }
+
+    if (currentStore) {
+      currentStore.produtos.push({ produto: name, qtd: qty });
+    }
+  });
+
+  return stores;
+}
+
+function buildCRMProductRankingTable() {
+  const tbody = document.getElementById('crmProductRankBody');
+  if (!tbody) return;
+
+  tbody.innerHTML = RANKING_GERAL_PRODUTOS_GAMIFICACAO.map(row => {
+    const pct = TOTAL_GERAL_GAMIFICACAO > 0 ? (row.qtd / TOTAL_GERAL_GAMIFICACAO) * 100 : 0;
+    return `
+      <tr>
+        <td><strong>${row.produto}</strong></td>
+        <td>${fmt(row.qtd)}</td>
+        <td>${fmtPct(pct, 1)}</td>
+      </tr>
+    `;
+  }).join('') + `
+    <tr class="table-total-row">
+      <td><strong>Total Geral</strong></td>
+      <td><strong>${fmt(TOTAL_GERAL_GAMIFICACAO)}</strong></td>
+      <td><strong>100,0%</strong></td>
+    </tr>
+  `;
+}
+
+function buildCRMStoreAccordionTable() {
+  const tbody = document.getElementById('crmStoreAccordionBody');
+  if (!tbody) return;
+
+  const stores = parseRankingGamificacaoRaw();
+  const totalLojas = TOTAL_GERAL_GAMIFICACAO;
+
+  tbody.innerHTML = stores.map(store => {
+    const pctTotal = totalLojas > 0 ? (store.qtd / totalLojas) * 100 : 0;
+    const detailRows = store.produtos.map(prod => {
+      const pctLoja = store.qtd > 0 ? (prod.qtd / store.qtd) * 100 : 0;
+      return `
+        <tr>
+          <td>${prod.produto}</td>
+          <td>${fmt(prod.qtd)}</td>
+          <td>${fmtPct(pctLoja, 1)}</td>
+        </tr>
+      `;
+    }).join('');
+
+    return `
+      <tr>
+        <td>
+          <details class="store-accordion">
+            <summary><strong>${store.loja}</strong></summary>
+            <div class="store-accordion-content">
+              <table class="store-products-table">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Qtde</th>
+                    <th>% na loja</th>
+                  </tr>
+                </thead>
+                <tbody>${detailRows}</tbody>
+              </table>
+            </div>
+          </details>
+        </td>
+        <td>${fmt(store.qtd)}</td>
+        <td>${fmtPct(pctTotal, 1)}</td>
+      </tr>
+    `;
+  }).join('') + `
+    <tr class="table-total-row">
+      <td><strong>Total Geral</strong></td>
+      <td><strong>${fmt(totalLojas)}</strong></td>
+      <td><strong>100,0%</strong></td>
+    </tr>
+  `;
+}
+
 // ═══════════════════════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initNav();
+  syncDashboardKpisFromData();
   renderVisaoGeral();
   animateCounters();
 });
