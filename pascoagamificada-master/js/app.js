@@ -74,6 +74,39 @@ function animateCounters() {
   });
 }
 
+function syncDashboardKpisFromData() {
+  const setCount = (id, value) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.dataset.count = String(value);
+    el.textContent = '0';
+  };
+
+  setCount('kpiClientesCampanha', TOTAIS.clientesCompraramCampanha);
+  setCount('kpiClientesApp', TOTAIS.clientesComAppInstalado);
+  setCount('kpiCuponsVendas', TOTAIS.cuponsVendasCampanha);
+  setCount('kpiLojasAtivas', TOTAIS.lojasParticipantes);
+  setCount('kpiAbriuScan', TOTAIS.gamificacaoAbriuScan);
+  setCount('kpiEscaneou', TOTAIS.gamificacaoEscaneou);
+  setCount('kpiCpfsCompraram', TOTAIS.gamificacaoCompletou);
+
+  const legendAbriuScan = document.getElementById('legendAbriuScan');
+  if (legendAbriuScan) legendAbriuScan.textContent = fmt(TOTAIS.gamificacaoAbriuScan);
+  const legendEscaneou = document.getElementById('legendEscaneou');
+  if (legendEscaneou) legendEscaneou.textContent = fmt(TOTAIS.gamificacaoEscaneou);
+
+  const pctAbriuScan = (TOTAIS.gamificacaoAbriuScan / TOTAIS.gamificacaoAbriuJogo) * 100;
+  const pctEscaneou = (TOTAIS.gamificacaoEscaneou / TOTAIS.gamificacaoAbriuScan) * 100;
+  const pctCompraram = (TOTAIS.gamificacaoCompletou / TOTAIS.gamificacaoEscaneou) * 100;
+
+  const kpiAbriuScanSub = document.getElementById('kpiAbriuScanSub');
+  if (kpiAbriuScanSub) kpiAbriuScanSub.textContent = `${fmtPct(pctAbriuScan, 2)} de quem abriu o jogo`;
+  const kpiEscaneouSub = document.getElementById('kpiEscaneouSub');
+  if (kpiEscaneouSub) kpiEscaneouSub.textContent = `${fmtPct(pctEscaneou, 2)} de scan success`;
+  const kpiCpfsCompraramSub = document.getElementById('kpiCpfsCompraramSub');
+  if (kpiCpfsCompraramSub) kpiCpfsCompraramSub.textContent = `${fmtPct(pctCompraram, 2)} de quem escaneou`;
+}
+
 
 function initMobileMenu() {
   const sidebar = document.getElementById('sidebar');
@@ -1128,7 +1161,7 @@ function buildCRMStoreAccordionTable() {
   if (!tbody) return;
 
   const stores = parseRankingGamificacaoRaw();
-  const totalLojas = TOTAL_GERAL_GAMIFICACAO;
+  const totalLojas = stores.reduce((acc, store) => acc + store.qtd, 0);
 
   tbody.innerHTML = stores.map(store => {
     const pctTotal = totalLojas > 0 ? (store.qtd / totalLojas) * 100 : 0;
@@ -1181,6 +1214,7 @@ function buildCRMStoreAccordionTable() {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initNav();
+  syncDashboardKpisFromData();
   renderVisaoGeral();
   animateCounters();
 });
