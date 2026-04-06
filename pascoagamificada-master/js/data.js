@@ -20,101 +20,53 @@ const PALETA = {
 };
 
 const TOTAIS = {
-  clientesParticipantes: 19766,
-  cuponsApp: 21296,
-  vendasApp: 31110,
+  clientesParticipantes: 74695,
+  cuponsApp: 333260,
+  vendasApp: 532686,
   lojasParticipantes: 68,
-  cuponsVendasCampanha: 94907,
-  participacaoApp: 22,
-  clientesTotalBase: 88656,
-  clientesNaoParticipantes: 68890,
-  clientesCompraramCampanha: 88656,
-  clientesComAppInstalado: 41584,
-  clientesSemAppInstalado: 47072,
-  viewsCampanha: 88656,
-  scanSuccess: 6717,
+  cuponsVendasCampanha: 333260,
+  participacaoApp: 12,
+  clientesTotalBase: 313803,
+  clientesNaoParticipantes: 239108,
+  clientesCompraramCampanha: 313803,
+  clientesComAppInstalado: 74695,
+  clientesSemAppInstalado: 239108,
+  viewsCampanha: 313803,
+  scanSuccess: 2751,
   gamificacaoAbriuJogo: 16752,
-  gamificacaoAbriuScan: 859,
-  gamificacaoEscaneou: 820,
-  gamificacaoCompletou: 81,
+  gamificacaoAbriuScan: 3118,
+  gamificacaoEscaneou: 2751,
+  gamificacaoCompletou: 279,
   overlap: 0,
   produtosCampanha: 19,
   produtosApp: 18
 };
 
 const EVOLUCAO_DIARIA_CAMPANHA = [
-  {
-    data: '13/03',
-    Dentro: { qtd: 758, tickets: 318, clientes: 295 },
-    Fora:   { qtd: 14610, tickets: 8298, clientes: 7684 },
-    Total:  { qtd: 15368, tickets: 8616, clientes: 7979 }
-  },
-  {
-    data: '14/03',
-    Dentro: { qtd: 1789, tickets: 1228, clientes: 1155 },
-    Fora:   { qtd: 19367, tickets: 11289, clientes: 10590 },
-    Total:  { qtd: 21156, tickets: 12517, clientes: 11745 }
-  },
-  {
-    data: '15/03',
-    Dentro: { qtd: 1347, tickets: 996, clientes: 911 },
-    Fora:   { qtd: 9739, tickets: 6988, clientes: 6497 },
-    Total:  { qtd: 11086, tickets: 7984, clientes: 7408 }
-  },
-  {
-    data: '16/03',
-    Dentro: { qtd: 1046, tickets: 744, clientes: 687 },
-    Fora:   { qtd: 5650, tickets: 4350, clientes: 4018 },
-    Total:  { qtd: 6696, tickets: 5094, clientes: 4705 }
-  },
-  {
-    data: '17/03',
-    Dentro: { qtd: 1676, tickets: 1203, clientes: 1114 },
-    Fora:   { qtd: 7500, tickets: 5217, clientes: 4879 },
-    Total:  { qtd: 9176, tickets: 6420, clientes: 5993 }
-  },
-  {
-    data: '18/03',
-    Dentro: { qtd: 2192, tickets: 1437, clientes: 1334 },
-    Fora:   { qtd: 8471, tickets: 5848, clientes: 5498 },
-    Total:  { qtd: 10663, tickets: 7285, clientes: 6832 }
-  },
-  {
-    data: '19/03',
-    Dentro: { qtd: 1879, tickets: 1317, clientes: 1221 },
-    Fora:   { qtd: 7967, tickets: 5736, clientes: 5362 },
-    Total:  { qtd: 9846, tickets: 7053, clientes: 6583 }
-  },
-  {
-    data: '20/03',
-    Dentro: { qtd: 2363, tickets: 1591, clientes: 1477 },
-    Fora:   { qtd: 9174, tickets: 6693, clientes: 6253 },
-    Total:  { qtd: 11537, tickets: 8284, clientes: 7730 }
-  },
-  {
-    data: '21/03',
-    Dentro: { qtd: 5696, tickets: 3961, clientes: 3727 },
-    Fora:   { qtd: 8521, tickets: 6501, clientes: 6209 },
-    Total:  { qtd: 14217, tickets: 10462, clientes: 9936 }
-  },
-  {
-    data: '22/03',
-    Dentro: { qtd: 4322, tickets: 3182, clientes: 2933 },
-    Fora:   { qtd: 6307, tickets: 4954, clientes: 4630 },
-    Total:  { qtd: 10629, tickets: 8136, clientes: 7563 }
-  },
-  {
-    data: '23/03',
-    Dentro: { qtd: 3547, tickets: 2329, clientes: 2149 },
-    Fora:   { qtd: 4480, tickets: 3272, clientes: 3059 },
-    Total:  { qtd: 8027, tickets: 5601, clientes: 5208 }
-  },
-  {
-    data: '24/03',
-    Dentro: { qtd: 4495, tickets: 2990, clientes: 2763 },
-    Fora:   { qtd: 6169, tickets: 4465, clientes: 4211 },
-    Total:  { qtd: 10664, tickets: 7455, clientes: 6974 }
-  }
+  { data: '13/03', Dentro: { qtd: 758, tickets: 318, clientes: 295 }, Fora: { qtd: 14610, tickets: 8298, clientes: 7684 }, Total: { qtd: 15368, tickets: 8616, clientes: 7979 } },
+  { data: '14/03', Dentro: { qtd: 1789, tickets: 1228, clientes: 1155 }, Fora: { qtd: 19367, tickets: 11289, clientes: 10590 }, Total: { qtd: 21156, tickets: 12517, clientes: 11745 } },
+  { data: '15/03', Dentro: { qtd: 1347, tickets: 996, clientes: 911 }, Fora: { qtd: 9739, tickets: 6988, clientes: 6497 }, Total: { qtd: 11086, tickets: 7984, clientes: 7408 } },
+  { data: '16/03', Dentro: { qtd: 1046, tickets: 744, clientes: 687 }, Fora: { qtd: 5650, tickets: 4350, clientes: 4018 }, Total: { qtd: 6696, tickets: 5094, clientes: 4705 } },
+  { data: '17/03', Dentro: { qtd: 1676, tickets: 1203, clientes: 1114 }, Fora: { qtd: 7500, tickets: 5217, clientes: 4879 }, Total: { qtd: 9176, tickets: 6420, clientes: 5993 } },
+  { data: '18/03', Dentro: { qtd: 2192, tickets: 1437, clientes: 1334 }, Fora: { qtd: 8471, tickets: 5848, clientes: 5498 }, Total: { qtd: 10663, tickets: 7285, clientes: 6832 } },
+  { data: '19/03', Dentro: { qtd: 1879, tickets: 1317, clientes: 1221 }, Fora: { qtd: 7967, tickets: 5736, clientes: 5362 }, Total: { qtd: 9846, tickets: 7053, clientes: 6583 } },
+  { data: '20/03', Dentro: { qtd: 2363, tickets: 1591, clientes: 1477 }, Fora: { qtd: 9174, tickets: 6693, clientes: 6253 }, Total: { qtd: 11537, tickets: 8284, clientes: 7730 } },
+  { data: '21/03', Dentro: { qtd: 5696, tickets: 3961, clientes: 3727 }, Fora: { qtd: 8521, tickets: 6501, clientes: 6209 }, Total: { qtd: 14217, tickets: 10462, clientes: 9936 } },
+  { data: '22/03', Dentro: { qtd: 4322, tickets: 3182, clientes: 2933 }, Fora: { qtd: 6307, tickets: 4954, clientes: 4630 }, Total: { qtd: 10629, tickets: 8136, clientes: 7563 } },
+  { data: '23/03', Dentro: { qtd: 3547, tickets: 2329, clientes: 2149 }, Fora: { qtd: 4480, tickets: 3272, clientes: 3059 }, Total: { qtd: 8027, tickets: 5601, clientes: 5208 } },
+  { data: '24/03', Dentro: { qtd: 4495, tickets: 2990, clientes: 2763 }, Fora: { qtd: 6169, tickets: 4465, clientes: 4211 }, Total: { qtd: 10664, tickets: 7455, clientes: 6974 } },
+  { data: '25/03', Dentro: { qtd: 2277, tickets: 1482, clientes: 1385 }, Fora: { qtd: 9621, tickets: 6538, clientes: 6161 }, Total: { qtd: 11898, tickets: 8020, clientes: 7546 } },
+  { data: '26/03', Dentro: { qtd: 1477, tickets: 896, clientes: 829 }, Fora: { qtd: 10066, tickets: 6582, clientes: 6231 }, Total: { qtd: 11543, tickets: 7478, clientes: 7060 } },
+  { data: '27/03', Dentro: { qtd: 1822, tickets: 1115, clientes: 1041 }, Fora: { qtd: 14595, tickets: 9215, clientes: 8759 }, Total: { qtd: 16417, tickets: 10330, clientes: 9800 } },
+  { data: '28/03', Dentro: { qtd: 2933, tickets: 1776, clientes: 1656 }, Fora: { qtd: 22516, tickets: 14164, clientes: 13570 }, Total: { qtd: 25449, tickets: 15940, clientes: 15226 } },
+  { data: '29/03', Dentro: { qtd: 2161, tickets: 1315, clientes: 1221 }, Fora: { qtd: 15914, tickets: 10191, clientes: 9652 }, Total: { qtd: 18075, tickets: 11506, clientes: 10873 } },
+  { data: '30/03', Dentro: { qtd: 3221, tickets: 1793, clientes: 1666 }, Fora: { qtd: 18226, tickets: 10297, clientes: 9823 }, Total: { qtd: 21447, tickets: 12090, clientes: 11489 } },
+  { data: '31/03', Dentro: { qtd: 341, tickets: 213, clientes: 20 }, Fora: { qtd: 37293, tickets: 21582, clientes: 20866 }, Total: { qtd: 37634, tickets: 21795, clientes: 20886 } },
+  { data: '01/04', Dentro: { qtd: 555, tickets: 292, clientes: 21 }, Fora: { qtd: 56880, tickets: 33256, clientes: 32049 }, Total: { qtd: 57435, tickets: 33548, clientes: 32070 } },
+  { data: '02/04', Dentro: { qtd: 776, tickets: 421, clientes: 21 }, Fora: { qtd: 71661, tickets: 42101, clientes: 40192 }, Total: { qtd: 72437, tickets: 42522, clientes: 40213 } },
+  { data: '03/04', Dentro: { qtd: 6002, tickets: 4216, clientes: 3974 }, Fora: { qtd: 49528, tickets: 30100, clientes: 28298 }, Total: { qtd: 55530, tickets: 34316, clientes: 32272 } },
+  { data: '04/04', Dentro: { qtd: 7282, tickets: 4863, clientes: 4562 }, Fora: { qtd: 56800, tickets: 34818, clientes: 32196 }, Total: { qtd: 64082, tickets: 39681, clientes: 36758 } },
+  { data: '05/04', Dentro: { qtd: 0, tickets: 0, clientes: 0 }, Fora: { qtd: 1674, tickets: 1127, clientes: 954 }, Total: { qtd: 1674, tickets: 1127, clientes: 954 } }
 ];
 
 const EVOLUCAO_DIARIA_GERAL = [
@@ -141,99 +93,112 @@ const EVOLUCAO_DIARIA_GERAL = [
   { data: '21/03', qtd: 14217, cupons: 10462, clientes: 9936 },
   { data: '22/03', qtd: 10629, cupons: 8136, clientes: 7563 },
   { data: '23/03', qtd: 8027, cupons: 5601, clientes: 5208 },
-  { data: '24/03', qtd: 10664, cupons: 7455, clientes: 6974 }
+  { data: '24/03', qtd: 10664, cupons: 7455, clientes: 6974 },
+  { data: '25/03', qtd: 11898, cupons: 8020, clientes: 7546 },
+  { data: '26/03', qtd: 11543, cupons: 7478, clientes: 7060 },
+  { data: '27/03', qtd: 16417, cupons: 10330, clientes: 9800 },
+  { data: '28/03', qtd: 25449, cupons: 15940, clientes: 15226 },
+  { data: '29/03', qtd: 18075, cupons: 11506, clientes: 10873 },
+  { data: '30/03', qtd: 21447, cupons: 12090, clientes: 11489 },
+  { data: '31/03', qtd: 37634, cupons: 21795, clientes: 20886 },
+  { data: '01/04', qtd: 57435, cupons: 33548, clientes: 32070 },
+  { data: '02/04', qtd: 72437, cupons: 42522, clientes: 40213 },
+  { data: '03/04', qtd: 55530, cupons: 34316, clientes: 32272 },
+  { data: '04/04', qtd: 64082, cupons: 39681, clientes: 36758 },
+  { data: '05/04', qtd: 1674, cupons: 1127, clientes: 954 }
 ];
 
 const RANKING_LOJAS_DENTRO = [
-  { loja: '29. Agua Verde', qtd: 5939, tickets: 3465, clientes: 3316 },
-  { loja: '22. Champagnat', qtd: 5560, tickets: 2842, clientes: 2645 },
-  { loja: '33. Sao Jose-Rua Joinville', qtd: 4829, tickets: 3495, clientes: 3344 },
-  { loja: '21. Nilo Pecanha', qtd: 4514, tickets: 3016, clientes: 2880 },
-  { loja: '26. Torres', qtd: 3816, tickets: 2193, clientes: 2125 },
-  { loja: '52. Mafra Centro Ii', qtd: 3226, tickets: 1850, clientes: 1790 },
-  { loja: '25. Paranagua-Raia', qtd: 3214, tickets: 2151, clientes: 1910 },
-  { loja: '06. Pinheirinho', qtd: 3183, tickets: 2220, clientes: 2095 },
-  { loja: '82. Condor Cic Jk', qtd: 3010, tickets: 1960, clientes: 1802 },
-  { loja: '27. Novo Mundo', qtd: 2898, tickets: 2201, clientes: 2093 },
-  { loja: '20. Maringa Av Parana', qtd: 2806, tickets: 2121, clientes: 1952 },
-  { loja: '23. Araucaria Br', qtd: 2672, tickets: 1901, clientes: 1847 },
-  { loja: '24. Santa Candida', qtd: 2627, tickets: 1969, clientes: 1892 },
-  { loja: '04. Lapa', qtd: 2622, tickets: 1745, clientes: 1643 },
-  { loja: '14. Sao Jose Dos Pinhais', qtd: 2565, tickets: 1805, clientes: 1691 },
-  { loja: '37. Cajuru', qtd: 2561, tickets: 1999, clientes: 1928 },
-  { loja: '45. Araucaria Costeira', qtd: 2482, tickets: 1959, clientes: 1851 },
-  { loja: '49. Boa Vista', qtd: 2379, tickets: 1849, clientes: 1790 },
-  { loja: '50. Santa Quiteria', qtd: 2379, tickets: 1290, clientes: 1216 },
-  { loja: '56. Piraquara', qtd: 2326, tickets: 1685, clientes: 1589 },
-  { loja: '08. Paranagua Centro', qtd: 2297, tickets: 1086, clientes: 860 },
-  { loja: '28. Cristo Rei', qtd: 2250, tickets: 1674, clientes: 1555 },
-  { loja: '32. Uvaranas', qtd: 2248, tickets: 1461, clientes: 1382 },
-  { loja: '83. Condor Merces', qtd: 2221, tickets: 1616, clientes: 1525 },
-  { loja: '11. Sao Braz', qtd: 2221, tickets: 1652, clientes: 1580 },
-  { loja: '19. Ponta Grossa Nova Russia', qtd: 2211, tickets: 1494, clientes: 1393 },
-  { loja: '91. Zonta (Franquia)', qtd: 2185, tickets: 1594, clientes: 1514 },
-  { loja: '54. Francisco Derosso', qtd: 2123, tickets: 1531, clientes: 1452 },
-  { loja: '39. Pinhais', qtd: 2046, tickets: 1438, clientes: 1366 },
-  { loja: '30. Fazenda Rio Grande', qtd: 2034, tickets: 1454, clientes: 1359 },
-  { loja: '58. Pilarzinho', qtd: 1960, tickets: 1513, clientes: 1455 },
-  { loja: '43. Almirante Tamandare', qtd: 1946, tickets: 1420, clientes: 1357 },
-  { loja: '71. Araucaria Capela Velha', qtd: 1914, tickets: 1514, clientes: 1384 },
-  { loja: '57. Joinville - Boa Vista', qtd: 1911, tickets: 1383, clientes: 1219 },
-  { loja: '07. Marechal', qtd: 1902, tickets: 1225, clientes: 1138 },
-  { loja: '66. Barreirinha', qtd: 1899, tickets: 974, clientes: 892 },
-  { loja: '47. Pinhais Av.Irai', qtd: 1759, tickets: 1169, clientes: 1105 },
-  { loja: '05. Wenceslau Braz', qtd: 1708, tickets: 967, clientes: 897 },
-  { loja: '36. Castro', qtd: 1683, tickets: 1050, clientes: 934 },
-  { loja: '41. Campo Mourao', qtd: 1602, tickets: 1145, clientes: 1099 },
-  { loja: '10. Campo Comprido', qtd: 1581, tickets: 1275, clientes: 1175 },
-  { loja: '13. Sitio Cercado', qtd: 1564, tickets: 1251, clientes: 1166 },
-  { loja: '38. Colombo', qtd: 1550, tickets: 1168, clientes: 1120 },
-  { loja: '44. Ponta Grossa - Oficinas', qtd: 1536, tickets: 1167, clientes: 1103 },
-  { loja: '51. Joinville America', qtd: 1487, tickets: 940, clientes: 858 },
-  { loja: '67. Ponta Grossa - Ernesto Vilela', qtd: 1442, tickets: 983, clientes: 915 },
-  { loja: '03. Santa Felicidade', qtd: 1387, tickets: 1032, clientes: 959 },
-  { loja: '31. Campo Largo', qtd: 1377, tickets: 948, clientes: 875 },
-  { loja: '40. Maringa Av Colombo', qtd: 1369, tickets: 1114, clientes: 985 },
-  { loja: '63. Maringa Av Kakogawa', qtd: 1350, tickets: 821, clientes: 774 },
-  { loja: '48. Joinville Itaum', qtd: 1328, tickets: 930, clientes: 800 },
-  { loja: '55. Jaragua Do Sul', qtd: 1328, tickets: 759, clientes: 679 },
-  { loja: '60. Maringa Av Dr Luiz Teixeira', qtd: 1324, tickets: 908, clientes: 830 },
-  { loja: '46. Campo Largo Sao Jose', qtd: 1316, tickets: 1013, clientes: 958 },
-  { loja: '42. Ponta Grossa - Jardim Carvalho', qtd: 1283, tickets: 928, clientes: 876 },
-  { loja: '15. Apucarana', qtd: 1231, tickets: 820, clientes: 761 },
-  { loja: '79. Sao Bento Do Sul Centro', qtd: 1176, tickets: 819, clientes: 712 },
-  { loja: '61. Jardim Das Americas', qtd: 1157, tickets: 792, clientes: 748 },
-  { loja: '64. Gralha Azul', qtd: 1142, tickets: 943, clientes: 873 },
-  { loja: '65. Rio Negro', qtd: 1123, tickets: 686, clientes: 647 },
-  { loja: '09. Londrina', qtd: 1057, tickets: 829, clientes: 707 },
-  { loja: '34. Brasilia', qtd: 962, tickets: 754, clientes: 686 },
-  { loja: '53. Joao Bettega', qtd: 957, tickets: 648, clientes: 609 },
-  { loja: '80. Sao Bento Do Sul - Serra', qtd: 853, tickets: 622, clientes: 524 },
-  { loja: '18. Ponta Grossa(Centro)', qtd: 785, tickets: 596, clientes: 466 },
-  { loja: '17. Ahu', qtd: 755, tickets: 547, clientes: 521 },
-  { loja: '78. Rio Negrinho', qtd: 677, tickets: 360, clientes: 295 },
-  { loja: '86. Condor S.J.Pinhais Rui Barbosa', qtd: 240, tickets: 178, clientes: 169 }
+  { loja: '33. Sao Jose-Rua Joinville', qtd: 17906, tickets: 11263, clientes: 10855 },
+  { loja: '21. Nilo Pecanha', qtd: 16491, tickets: 9822, clientes: 9522 },
+  { loja: '52. Mafra Centro Ii', qtd: 14753, tickets: 7951, clientes: 7727 },
+  { loja: '29. Agua Verde', qtd: 14319, tickets: 8360, clientes: 8054 },
+  { loja: '06. Pinheirinho', qtd: 13129, tickets: 8301, clientes: 7885 },
+  { loja: '25. Paranagua-Raia', qtd: 13071, tickets: 8136, clientes: 7607 },
+  { loja: '24. Santa Candida', qtd: 12357, tickets: 7765, clientes: 7436 },
+  { loja: '22. Champagnat', qtd: 12285, tickets: 7005, clientes: 6646 },
+  { loja: '54. Francisco Derosso', qtd: 12141, tickets: 7268, clientes: 6933 },
+  { loja: '32. Uvaranas', qtd: 11580, tickets: 6857, clientes: 6588 },
+  { loja: '82. Condor Cic Jk', qtd: 11563, tickets: 6943, clientes: 6358 },
+  { loja: '26. Torres', qtd: 11380, tickets: 6614, clientes: 6415 },
+  { loja: '23. Araucaria Br', qtd: 11236, tickets: 7098, clientes: 6859 },
+  { loja: '19. Ponta Grossa Nova Russia', qtd: 10600, tickets: 6362, clientes: 6006 },
+  { loja: '91. Zonta (Franquia)', qtd: 10356, tickets: 6475, clientes: 6188 },
+  { loja: '27. Novo Mundo', qtd: 10319, tickets: 6680, clientes: 6436 },
+  { loja: '56. Piraquara', qtd: 10288, tickets: 6534, clientes: 6135 },
+  { loja: '45. Araucaria Costeira', qtd: 9827, tickets: 6656, clientes: 6338 },
+  { loja: '37. Cajuru', qtd: 9472, tickets: 6199, clientes: 6030 },
+  { loja: '39. Pinhais', qtd: 9212, tickets: 5787, clientes: 5515 },
+  { loja: '04. Lapa', qtd: 9129, tickets: 5598, clientes: 5288 },
+  { loja: '14. Sao Jose Dos Pinhais', qtd: 9020, tickets: 5782, clientes: 5490 },
+  { loja: '30. Fazenda Rio Grande', qtd: 9001, tickets: 5798, clientes: 5450 },
+  { loja: '11. Sao Braz', qtd: 8798, tickets: 5520, clientes: 5299 },
+  { loja: '57. Joinville - Boa Vista', qtd: 8793, tickets: 5726, clientes: 5144 },
+  { loja: '13. Sitio Cercado', qtd: 8508, tickets: 5524, clientes: 5149 },
+  { loja: '67. Ponta Grossa - Ernesto Vilela', qtd: 8299, tickets: 4647, clientes: 4309 },
+  { loja: '44. Ponta Grossa - Oficinas', qtd: 8290, tickets: 5083, clientes: 4809 },
+  { loja: '08. Paranagua Centro', qtd: 7820, tickets: 4556, clientes: 3979 },
+  { loja: '07. Marechal', qtd: 7653, tickets: 4886, clientes: 4584 },
+  { loja: '38. Colombo', qtd: 7505, tickets: 4873, clientes: 4636 },
+  { loja: '41. Campo Mourao', qtd: 7381, tickets: 4665, clientes: 4496 },
+  { loja: '49. Boa Vista', qtd: 7375, tickets: 5064, clientes: 4920 },
+  { loja: '43. Almirante Tamandare', qtd: 7367, tickets: 4837, clientes: 4595 },
+  { loja: '20. Maringa Av Parana', qtd: 7077, tickets: 4977, clientes: 4628 },
+  { loja: '58. Pilarzinho', qtd: 6790, tickets: 4533, clientes: 4374 },
+  { loja: '36. Castro', qtd: 6722, tickets: 4099, clientes: 3755 },
+  { loja: '47. Pinhais Av.Irai', qtd: 6621, tickets: 4270, clientes: 4014 },
+  { loja: '83. Condor Merces', qtd: 6612, tickets: 4330, clientes: 4096 },
+  { loja: '48. Joinville Itaum', qtd: 6516, tickets: 4090, clientes: 3515 },
+  { loja: '66. Barreirinha', qtd: 6508, tickets: 3695, clientes: 3513 },
+  { loja: '31. Campo Largo', qtd: 6435, tickets: 3895, clientes: 3640 },
+  { loja: '10. Campo Comprido', qtd: 6368, tickets: 4469, clientes: 4199 },
+  { loja: '71. Araucaria Capela Velha', qtd: 6268, tickets: 4471, clientes: 4105 },
+  { loja: '28. Cristo Rei', qtd: 6208, tickets: 4075, clientes: 3829 },
+  { loja: '53. Joao Bettega', qtd: 6044, tickets: 3852, clientes: 3616 },
+  { loja: '46. Campo Largo Sao Jose', qtd: 5712, tickets: 3768, clientes: 3560 },
+  { loja: '03. Santa Felicidade', qtd: 5681, tickets: 3585, clientes: 3340 },
+  { loja: '42. Ponta Grossa - Jardim Carvalho', qtd: 5552, tickets: 3540, clientes: 3376 },
+  { loja: '50. Santa Quiteria', qtd: 5423, tickets: 3318, clientes: 3160 },
+  { loja: '51. Joinvile America', qtd: 5335, tickets: 3188, clientes: 2949 },
+  { loja: '64. Gralha Azul', qtd: 5265, tickets: 3615, clientes: 3406 },
+  { loja: '65. Rio Negro', qtd: 4999, tickets: 2800, clientes: 2695 },
+  { loja: '40. Maringa Av Colombo', qtd: 4978, tickets: 3398, clientes: 3091 },
+  { loja: '79. Sao Bento Do Sul Centro', qtd: 4696, tickets: 2869, clientes: 2421 },
+  { loja: '15. Apucarana', qtd: 4645, tickets: 2975, clientes: 2804 },
+  { loja: '86. Condor S.J.Pinhais Rui Barbosa', qtd: 4614, tickets: 3003, clientes: 2829 },
+  { loja: '18. Ponta Grossa(Centro)', qtd: 4554, tickets: 2894, clientes: 2318 },
+  { loja: '05. Wenceslau Braz', qtd: 4507, tickets: 2779, clientes: 2580 },
+  { loja: '60. Maringa Av Dr Luiz Teixeira', qtd: 4293, tickets: 2679, clientes: 2484 },
+  { loja: '63. Maringa Av Kakogawa', qtd: 4030, tickets: 2505, clientes: 2402 },
+  { loja: '09. Londrina', qtd: 3991, tickets: 2722, clientes: 2345 },
+  { loja: '61. Jardim Das Americas', qtd: 3822, tickets: 2394, clientes: 2287 },
+  { loja: '34. Brasilia', qtd: 3784, tickets: 2442, clientes: 2274 },
+  { loja: '55. Jaragua Do Sul', qtd: 3585, tickets: 2313, clientes: 2083 },
+  { loja: '80. Sao Bento Do Sul - Serra', qtd: 3065, tickets: 2058, clientes: 1693 },
+  { loja: '78. Rio Negrinho', qtd: 2502, tickets: 1482, clientes: 1264 },
+  { loja: '17. Ahu', qtd: 2260, tickets: 1542, clientes: 1477 },
 ];
 
 const SALES_DENTRO_MAP = {
-  118311: { itens: 1, tickets: 1, clientes: 1 },
-  1991454: { itens: 80, tickets: 48, clientes: 48 },
-  2077535: { itens: 8083, tickets: 4781, clientes: 4427 },
-  2077543: { itens: 7607, tickets: 5239, clientes: 4885 },
-  2077568: { itens: 872, tickets: 663, clientes: 614 },
-  2077576: { itens: 1017, tickets: 769, clientes: 713 },
-  2077584: { itens: 6300, tickets: 4677, clientes: 4334 },
-  2077592: { itens: 1122, tickets: 664, clientes: 634 },
-  2128411: { itens: 3646, tickets: 2641, clientes: 2453 },
-  2207371: { itens: 75, tickets: 66, clientes: 50 },
-  2207389: { itens: 89, tickets: 65, clientes: 58 },
-  2207397: { itens: 87, tickets: 62, clientes: 53 },
-  2207405: { itens: 227, tickets: 153, clientes: 137 },
-  2207413: { itens: 175, tickets: 120, clientes: 108 },
-  2207421: { itens: 67, tickets: 51, clientes: 51 },
-  2207439: { itens: 79, tickets: 56, clientes: 48 },
-  2236370: { itens: 536, tickets: 431, clientes: 401 },
-  2236388: { itens: 1047, tickets: 809, clientes: 751 }
+  118311: { itens: 40, tickets: 27, clientes: 27 },
+  1991454: { itens: 169, tickets: 103, clientes: 62 },
+  2077535: { itens: 13075, tickets: 7405, clientes: 6732 },
+  2077543: { itens: 12252, tickets: 8173, clientes: 7473 },
+  2077568: { itens: 1004, tickets: 731, clientes: 670 },
+  2077576: { itens: 1119, tickets: 838, clientes: 774 },
+  2077584: { itens: 10084, tickets: 7153, clientes: 6529 },
+  2077592: { itens: 1172, tickets: 695, clientes: 662 },
+  2128403: { itens: 0, tickets: 0, clientes: 0 },
+  2128411: { itens: 4161, tickets: 2946, clientes: 2709 },
+  2207371: { itens: 112, tickets: 91, clientes: 75 },
+  2207389: { itens: 125, tickets: 87, clientes: 80 },
+  2207397: { itens: 104, tickets: 73, clientes: 64 },
+  2207405: { itens: 291, tickets: 185, clientes: 169 },
+  2207413: { itens: 218, tickets: 157, clientes: 145 },
+  2207421: { itens: 197, tickets: 141, clientes: 141 },
+  2207439: { itens: 104, tickets: 66, clientes: 58 },
+  2236370: { itens: 564, tickets: 455, clientes: 422 },
+  2236388: { itens: 1106, tickets: 852, clientes: 792 }
 };
 
 const PRODUTOS_CAMPANHA_BASE = [
@@ -482,3 +447,288 @@ const LOJAS_OPERACIONAL = (() => {
 })();
 
 const PODIO_TOP3_LOJAS = LOJAS_OPERACIONAL.slice(0, 3);
+
+
+
+const RANKING_GERAL_PRODUTOS_GAMIFICACAO = [
+  { produto: 'Bombom Lacta Ouro Bco/Sonho Valsa 220g', qtd: 217 },
+  { produto: 'Choc.Lacta Ao Leite 145g', qtd: 162 },
+  { produto: 'Amandita Lacta Choc.200g', qtd: 147 },
+  { produto: 'Choc.Lacta Shot 145g', qtd: 129 },
+  { produto: 'Choc.Lacta Ouro Bco 98g', qtd: 104 },
+  { produto: 'Choc.Lacta Laka/Oreo 145g', qtd: 99 },
+  { produto: 'Choc.Lacta Laka 145g', qtd: 99 },
+  { produto: 'Choc.Lacta Ao Leite 80g', qtd: 79 },
+  { produto: 'Choc.Lacta Laka 80g', qtd: 79 },
+  { produto: 'Choc.Lacta Diamante Negro/Laka 145g', qtd: 77 },
+  { produto: 'Choc.Lacta Laka Rech.Caramelo 104g', qtd: 67 },
+  { produto: 'Choc.Lacta Shot 80g', qtd: 54 },
+  { produto: 'Choc.Lacta Diamante Negro 145g', qtd: 47 },
+  { produto: 'Choc.Lacta Ao Leite Rech.Caramelo 104g', qtd: 40 },
+  { produto: 'Choc.Lacta Diamante Negro/Laka 80g', qtd: 32 },
+  { produto: 'Choc.Lacta Amaro 80g', qtd: 31 },
+  { produto: 'Choc.Lacta Diamante Negro 80g', qtd: 31 },
+  { produto: 'Choc.Lacta Amaro 145g', qtd: 29 }
+];
+
+const TOTAL_GERAL_GAMIFICACAO = 1523;
+
+const RANKING_PRODUTOS_GAMIFICACAO_RAW = `52 - Mafra - Centro	99
+Amandita Lacta Choc.200g	6
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	22
+Choc.Lacta Amaro 145g	5
+Choc.Lacta Ao Leite 145g	4
+Choc.Lacta Ao Leite 80g	7
+Choc.Lacta Ao Leite Rech.Caramelo 104g	10
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Diamante Negro 80g	5
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka 145g	12
+Choc.Lacta Laka 80g	3
+Choc.Lacta Laka Rech.Caramelo 104g	4
+Choc.Lacta Laka/Oreo 145g	2
+Choc.Lacta Ouro Bco 98g	4
+Choc.Lacta Shot 145g	11
+Choc.Lacta Shot 80g	2
+58 - Pilarzinho	83
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	28
+Choc.Lacta Amaro 80g	4
+Choc.Lacta Ao Leite 145g	14
+Choc.Lacta Ao Leite 80g	13
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Diamante Negro/Laka 145g	3
+Choc.Lacta Laka 145g	2
+Choc.Lacta Laka Rech.Caramelo 104g	3
+Choc.Lacta Laka/Oreo 145g	5
+Choc.Lacta Ouro Bco 98g	3
+Choc.Lacta Shot 145g	5
+Choc.Lacta Shot 80g	1
+65 - Rio Negro	81
+Amandita Lacta Choc.200g	60
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	0
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	2
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Laka 80g	4
+Choc.Lacta Shot 145g	1
+52 - Mafra - Centro	79
+Amandita Lacta Choc.200g	5
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	21
+Choc.Lacta Amaro 145g	5
+Choc.Lacta Ao Leite 145g	2
+Choc.Lacta Ao Leite 80g	7
+Choc.Lacta Ao Leite Rech.Caramelo 104g	9
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Diamante Negro 80g	4
+Choc.Lacta Laka 145g	5
+Choc.Lacta Laka 80g	3
+Choc.Lacta Laka Rech.Caramelo 104g	2
+Choc.Lacta Laka/Oreo 145g	2
+Choc.Lacta Ouro Bco 98g	2
+Choc.Lacta Shot 145g	11
+46 - Campo Largo - Sao Jose	15
+Amandita Lacta Choc.200g	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	5
+Choc.Lacta Ao Leite 145g	5
+Choc.Lacta Laka 145g	3
+Choc.Lacta Laka/Oreo 145g	1
+6 - Pinheirinho	27
+Choc.Lacta Shot 80g	6
+Choc.Lacta Laka Rech.Caramelo 104g	4
+Choc.Lacta Ouro Bco 98g	4
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	3
+Choc.Lacta Shot 145g	2
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Laka 145g	1
+Amandita Lacta Choc.200g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Amaro 145g	1
+32 - Ponta Grossa - Uvaranas	27
+Choc.Lacta Laka Rech.Caramelo 104g	10
+Choc.Lacta Ouro Bco 98g	3
+Amandita Lacta Choc.200g	3
+Choc.Lacta Diamante Negro/Laka 80g	4
+Choc.Lacta Laka 80g	4
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Shot 80g	1
+26 - Torres	25
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	16
+Choc.Lacta Ao Leite Rech.Caramelo 104g	5
+Choc.Lacta Laka Rech.Caramelo 104g	4
+56 - Piraquara	18
+Choc.Lacta Shot 145g	4
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	4
+Choc.Lacta Ao Leite 145g	3
+Choc.Lacta Diamante Negro 145g	2
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Shot 80g	1
+Choc.Lacta Diamante Negro/Laka 80g	1
+Choc.Lacta Laka 80g	1
+21 - Nilo Pecanha	17
+Amandita Lacta Choc.200g	4
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	3
+Choc.Lacta Ouro Bco 98g	3
+Choc.Lacta Shot 80g	2
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+27 - Novo Mundo	16
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	6
+Choc.Lacta Laka 145g	3
+Choc.Lacta Ao Leite 145g	3
+Choc.Lacta Shot 80g	1
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Diamante Negro/Laka 80g	1
+25 - Paranagua - Raia	13
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	4
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Diamante Negro/Laka 80g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Laka 80g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+8 - Paranagua - Centro	13
+Choc.Lacta Shot 145g	6
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	4
+Choc.Lacta Laka 80g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Diamante Negro 145g	1
+48 - Joinville - Itaum	12
+Choc.Lacta Ouro Bco 98g	3
+Amandita Lacta Choc.200g	3
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Amaro 145g	1
+Choc.Lacta Laka/Oreo 145g	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Diamante Negro 145g	1
+Choc.Lacta Ao Leite 145g	1
+30 - Fazenda Rio Grande	10
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	5
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka/Oreo 145g	1
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+Choc.Lacta Shot 145g	1
+42 - Ponta Grossa - Jardim Carvalho	10
+Choc.Lacta Laka 80g	5
+Choc.Lacta Laka/Oreo 145g	3
+Amandita Lacta Choc.200g	1
+Choc.Lacta Ao Leite 145g	1
+33 - Sao Jose - Rua Joinville	10
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	3
+Choc.Lacta Ao Leite 145g	3
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 145g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Laka/Oreo 145g	1
+43 - Almirante Tamandare	9
+Choc.Lacta Ao Leite Rech.Caramelo 104g	4
+Choc.Lacta Laka Rech.Caramelo 104g	2
+Choc.Lacta Shot 145g	3
+83 - Condor Merces	9
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+Choc.Lacta Diamante Negro/Laka 145g	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Shot 145g	3
+Choc.Lacta Shot 80g	1
+82 - Condor Cic Jk	8
+Choc.Lacta Diamante Negro 145g	6
+Amandita Lacta Choc.200g	1
+Choc.Lacta Laka 80g	1
+63 - Maringa - Av Kakogawa	7
+Choc.Lacta Ao Leite Rech.Caramelo 104g	4
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Ao Leite 145g	1
+20 - Maringa - Av Parana	6
+Choc.Lacta Ao Leite 145g	4
+Choc.Lacta Shot 145g	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+19 - Ponta Grossa - Nova Russia	6
+Choc.Lacta Ouro Bco 98g	5
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+24 - Santa Candida	5
+Choc.Lacta Laka 80g	2
+Amandita Lacta Choc.200g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Ouro Bco 98g	1
+4 - Lapa	5
+Choc.Lacta Ao Leite Rech.Caramelo 104g	3
+Choc.Lacta Shot 145g	1
+Choc.Lacta Amaro 145g	1
+29 - Agua Verde	4
+Choc.Lacta Ao Leite 80g	2
+Choc.Lacta Laka 80g	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+64 - Gralha Azul	4
+Choc.Lacta Ao Leite 145g	1
+Choc.Lacta Shot 80g	1
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Diamante Negro 80g	1
+7 - Marechal	4
+Choc.Lacta Ao Leite 145g	2
+Choc.Lacta Shot 145g	1
+Choc.Lacta Amaro 80g	1
+23 - Araucaria BR	3
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+Choc.Lacta Laka 145g	1
+Choc.Lacta Diamante Negro 145g	1
+67-Ponta Grossa - Ernesto Viléla	3
+Choc.Lacta Laka 80g	1
+Choc.Lacta Shot 80g	1
+Choc.Lacta Ouro Bco 98g	1
+41 - Campo Mourao	3
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Diamante Negro 80g	1
+37 - Cajuru	2
+Choc.Lacta Ouro Bco 98g	1
+Choc.Lacta Diamante Negro/Laka 145g	1
+14 - Sao Jose Dos Pinhais	2
+Choc.Lacta Laka 80g	2
+22 - Champagnat	2
+Choc.Lacta Laka 80g	2
+28 - Cristo Rei	2
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	2
+71 - Araucaria Capela Velha	10
+Choc.Lacta Ao Leite 80g	1
+Choc.Lacta Diamante Negro 80g	1
+Choc.Lacta Diamante Negro/Laka 145g	2
+Choc.Lacta Laka 80g	1
+Choc.Lacta Shot 145g	3
+Choc.Lacta Shot 80g	2
+45 - Araucaria Costeira	1
+Choc.Lacta Ouro Bco 98g	1
+13 - Sitio Cercado	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+10 - Campo Comprido	1
+Choc.Lacta Ao Leite 145g	1
+11 - Sao Braz	1
+Choc.Lacta Ao Leite 145g	1
+49 - Boa Vista	1
+Choc.Lacta Laka Rech.Caramelo 104g	1
+47 - Pinhais - Av.Irai	1
+Choc.Lacta Amaro 145g	1
+54 - Francisco Derosso	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+60 - Maringa - Av Dr Luiz Teixeira	1
+Bombom Lacta Ouro Bco/Sonho Valsa 220g	1
+66 - Barreirinha	1
+Choc.Lacta Ao Leite Rech.Caramelo 104g	1
+17 - Ahu	1
+Amandita Lacta Choc.200g	1
+Total Geral	1523`;
